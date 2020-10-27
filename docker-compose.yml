@@ -1,0 +1,28 @@
+version: '3'
+services:
+
+    staffweb:
+        build: ./containers/staffweb
+        ports:
+            - "88:80"
+        volumes:
+            - ./containers/staffweb/src:/var/www/html
+            - staffweb_node_modules:/var/www/html/node_modules
+        networks:
+            ji_dev_net:
+                ipv4_address: 172.18.12.1
+                aliases:
+                    - staffweb
+    staff_transpiler:
+        image: node:slim
+        volumes:
+            - ./containers/staffweb/src:/target:rw
+            - staffweb_node_modules:/target/node_modules
+        working_dir: /target
+
+networks:
+    ji_dev_net:
+        external: true
+
+volumes:
+    staffweb_node_modules:

@@ -1,0 +1,65 @@
+body, .table {
+    color: $gray-800;
+}
+
+.bg-gradient-sidebar {
+    background-color: $primary;
+    background-image: linear-gradient(180deg, $primary 10%, #235196 100%);
+    background-size: cover;
+}
+
+.btn-primary {
+    color: $white;
+    background-color: $primary;
+    border-color: $primary;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: $primary-light;
+    border-color: $primary-light;
+}
+
+.sidebar .nav-item .collapse .collapse-inner .collapse-item.active,
+.sidebar .nav-item .collapsing .collapse-inner .collapse-item.active {
+    color: $primary;
+}
+
+a {
+    color: $primary;
+}
+
+.pull-right {
+    float: right;
+}
+.pull-left {
+    float: left;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+}
+
+// Datepicker
+.datepicker td, .datepicker th {
+    width: 30px;
+}
+
+.datepicker.dropdown-menu {
+    border-color: $gray-400;
+    color: $gray-800;
+}
+
+.datepicker table tr td.today,
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today.disabled:hover,
+.datepicker table tr td.today:hover {
+    background-image: none;
+}
+
+.datepicker table tr td.active,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active:hover {
+    background-image: none;
+}
